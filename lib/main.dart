@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'IT WAS ALWAYS THE JAGS!!!',
+      title: 'IT WAS ALWAYS THE JAGS!',
       theme: appTheme,
       home: const SplashPage(),
       routes: <String, WidgetBuilder>{

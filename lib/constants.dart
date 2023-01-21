@@ -15,10 +15,10 @@ final appTheme = ThemeData.dark().copyWith(
   primaryColorDark: Colors.teal,
   appBarTheme: const AppBarTheme(
     elevation: 1,
-    backgroundColor: Colors.black,
+    backgroundColor: Colors.teal,
     iconTheme: IconThemeData(color: Colors.white),
     titleTextStyle: TextStyle(
-      color: Colors.white,
+      color: Colors.black,
       fontSize: 18,
     ),
   ),

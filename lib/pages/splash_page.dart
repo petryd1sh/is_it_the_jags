@@ -17,7 +17,7 @@ class SplashPageState extends State<SplashPage>{
   void initState() {
     super.initState();
     Timer(
-        Duration(seconds: 5),
+        Duration(seconds: 3),
             () => Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => const BoardPage())));
   }
@@ -25,12 +25,16 @@ class SplashPageState extends State<SplashPage>{
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(title: const Text('Sign In')),
+      appBar: AppBar(
+        title: const Center(child: Text("IT WAS ALWAYS THE JAGS!")),
+      ),
       body: ListView(
         padding: formPadding,
         children: const [
-          Image(
-              image: AssetImage('jags2.png')
+          Center(
+            child: Image(
+                image: AssetImage('jags.png')
+            ),
           ),
           preloader
         ],

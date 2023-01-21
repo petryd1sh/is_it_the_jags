@@ -21,35 +21,38 @@ class BoardPageState extends State<BoardPage> {
     setState(() {
       //_isLoading = true;
     });
-
     AudioPlayer().play(AssetSource('../iwatj.mp3'));
+  }
 
-
-    // final response = await supabase.auth.signIn(
-    //   email: _emailController.text,
-    //   password: _passwordController.text,
-    // );
-    // final error = response.error;
-    // if (error != null) {
-    //   context.showErrorSnackBar(message: error.message);
-    // }
-    // Navigator.of(context)
-    //     .pushAndRemoveUntil(ChatPage.route(), (route) => false);
-
+  Future<void> duval() async {
+    setState(() {
+      //_isLoading = true;
+    });
+    AudioPlayer().play(AssetSource('../duval.mp3'));
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('IT WAS ALWAYS THE JAGS!!!')),
-      body: ListView(
-        padding: formPadding,
-        children: [
-          ElevatedButton(
-            onPressed: iwatj,
-            child: const Text('ITWATJ'),
-          ),
-        ],
+      appBar: AppBar(title: const Center(child: Text('IT WAS ALWAYS THE JAGS!', textAlign: TextAlign.center))),
+      body: Center(
+        child: ListView(
+          padding: formPadding,
+          children: [
+            ElevatedButton(
+              onPressed: duval,
+              child: const Text('DUVAL'),
+            ),
+            ElevatedButton(
+              onPressed: iwatj,
+              // style: ElevatedButton.styleFrom(
+              //   //change width and height on your need width = 200 and height = 50
+              //   maximumSize: const Size(100, 50),
+              // ),
+              child: const Text('IWATJ'),
+            ),
+          ],
+        ),
       )
     );
   }
